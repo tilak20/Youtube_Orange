@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:background="@drawable/corner_bg">
+
+        <ImageView
+            android:id="@+id/imgRating"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:src="@drawable/vidoplayimg" />
+
+        <TextView
+            android:id="@+id/txtunuse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgRating"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppinssemibold"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:gravity="center"
+            android:text="Are you sure the video you want to
+download is playing?"
+            android:textColor="#363636"
+            android:textSize="@dimen/_14ssp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtunuse"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:gravity="center">
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/btnplay"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:src="@drawable/btnplay" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/btnsure"
+                android:layout_width="@dimen/_75sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_toEndOf="@id/btnplay"
+                android:src="@drawable/btnsure"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

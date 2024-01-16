@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.YTactivity.Search_Activity">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imgback"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:src="@drawable/ytbackicon"
+        app:layout_constraintBottom_toBottomOf="@+id/edtSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edtSearch" />
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/rectangle"
+        android:elevation="@dimen/_5sdp"
+        android:fontFamily="@font/poppinsmedium"
+        android:hint="Search here..."
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:lines="1"
+        android:maxLines="1"
+        android:paddingVertical="@dimen/_10sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:textColorHint="#9C9C9C"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toStartOf="@+id/btnsearch"
+        app:layout_constraintStart_toEndOf="@+id/imgback"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/btnsearch"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:src="@drawable/ytic_search"
+        app:layout_constraintBottom_toBottomOf="@+id/edtSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edtSearch" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/taglayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="visible"
+        android:elevation="@dimen/_1sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSearch">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtnews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:textColor="@color/tag_text"
+            android:text="Today News"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtlovesong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:textColor="@color/tag_text"
+            android:text="Love Songs"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtnews"
+            app:layout_constraintHorizontal_bias="0.714"
+            app:layout_constraintStart_toStartOf="@+id/txtnews"
+            app:layout_constraintTop_toBottomOf="@+id/txtnews" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtdance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:textColor="@color/tag_text"
+            android:text="Sexy Dance"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtlovesong"
+            app:layout_constraintStart_toStartOf="@+id/txtlovesong"
+            app:layout_constraintTop_toBottomOf="@+id/txtlovesong" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtdeepwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppinsmedium"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:textColor="@color/tag_text"
+            android:text="Deep Work"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtdance"
+            app:layout_constraintStart_toStartOf="@+id/txtdance"
+            app:layout_constraintTop_toBottomOf="@+id/txtdance" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtnature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:fontFamily="@font/poppinssemibold"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:text="Nature"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtnews"
+            app:layout_constraintStart_toEndOf="@+id/txtnews"
+            app:layout_constraintTop_toTopOf="@+id/txtnews" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txttiktok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinssemibold"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:text="Hot TikTok"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtlovesong"
+            app:layout_constraintEnd_toEndOf="@+id/txtnature"
+            app:layout_constraintStart_toStartOf="@+id/txtnature"
+            app:layout_constraintTop_toTopOf="@+id/txtlovesong" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtrelax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinssemibold"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:text="Relaxing"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtdance"
+            app:layout_constraintEnd_toEndOf="@+id/txttiktok"
+            app:layout_constraintStart_toStartOf="@+id/txttiktok"
+            app:layout_constraintTop_toTopOf="@+id/txtdance" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtchill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinssemibold"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:text="Chill"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtdeepwork"
+            app:layout_constraintEnd_toEndOf="@+id/txtrelax"
+            app:layout_constraintStart_toStartOf="@+id/txtrelax"
+            app:layout_constraintTop_toTopOf="@+id/txtdeepwork" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/suggestionRv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/rdGrp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSearch"
+        tools:listitem="@layout/suggestion_item" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchRv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/rdGrp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSearch"
+        tools:listitem="@layout/trending_item" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/rdGrp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentBottom="true"
+        android:elevation="@dimen/_1sdp"
+        android:outlineProvider="bounds"
+        android:outlineSpotShadowColor="#9A9A9A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/lntrending"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/videoBar"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/red"
+                android:visibility="visible" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:srcCompat="@drawable/trending" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Trending"
+                android:textColor="#606060"
+                android:textSize="@dimen/_10sdp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnYT"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtTube"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Browser"
+                android:textAlignment="center"
+                android:textColor="#606060"
+                android:textSize="@dimen/_12sdp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lnsearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/photoBar"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/red"
+                android:visibility="gone" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:srcCompat="@drawable/search" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="search"
+                android:textColor="#606060"
+                android:textSize="@dimen/_10sdp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/btnYt"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:elevation="@dimen/_4sdp"
+        android:src="@drawable/browseric"
+        app:layout_constraintBottom_toBottomOf="@+id/rdGrp"
+        app:layout_constraintEnd_toEndOf="@+id/rdGrp"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/rdGrp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

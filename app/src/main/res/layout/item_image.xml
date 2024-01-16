@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:padding="@dimen/_4sdp">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/image"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:scaleType="centerCrop"
+        android:src="@android:drawable/ic_media_play"
+        app:round="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/image"
+        android:layout_toEndOf="@id/image"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/poppinsmedium"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="Name"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/tvSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvName"
+        android:layout_toEndOf="@id/image"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppinsmedium"
+        android:maxLines="1"
+        android:text="Size"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSize"
+        android:layout_toEndOf="@id/image"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppinsmedium"
+        android:maxLines="1"
+        android:text="Date"
+        android:textColor="#68696d" />
+
+    <TextView
+        android:id="@+id/tvResolution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDate"
+        android:layout_toEndOf="@id/image"
+        android:fontFamily="@font/poppinsmedium" />
+
+</RelativeLayout>

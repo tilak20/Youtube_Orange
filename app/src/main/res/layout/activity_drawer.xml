@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.DrawerActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/imageFilterView"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/logo"
+            app:round="@dimen/_10sdp"
+            android:elevation="@dimen/_5sdp"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@id/imageFilterView"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlshare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlTop">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/imgshare"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@drawable/bg_icon"
+            android:elevation="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/share1" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtshare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/imgshare"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Share App"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlrate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlshare">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/imgrate"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@drawable/bg_icon"
+            android:elevation="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/rateus" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/imgrate"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Rate Us"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlprivacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlrate">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/imgprivacy"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@drawable/bg_icon"
+            android:elevation="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/privacy" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtprivacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/imgprivacy"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Privacy Policy"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp" />
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

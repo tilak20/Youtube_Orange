@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Activity.SearchActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/imgback"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_7sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/backicon"
+            app:round="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlSearch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/search_bg"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlTop">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/searchicon"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/ytic_search"
+            android:tint="#999999" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/clearsearch"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/closesearch"
+            android:tint="#9A9A9A" />
+
+        <EditText
+            android:id="@+id/tvSearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:layout_toEndOf="@id/searchicon"
+            android:background="@drawable/search_bg"
+            android:fontFamily="@font/poppinsregular"
+            android:hint="Search here..."
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="@dimen/_12ssp" />
+
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/lntabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:scrollbarThumbHorizontal="@null">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/rdgroup"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center"
+                android:checkedButton="@id/btnall"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/btnall"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/tab_selector"
+                    android:button="@null"
+                    android:fontFamily="@font/robotomedium"
+                    android:gravity="center"
+                    android:text="All"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp" />
+
+                <RadioButton
+                    android:id="@+id/btnplaylist"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginStart="@dimen/_10ssp"
+                    android:layout_toEndOf="@id/btnall"
+                    android:background="@drawable/tab_selector"
+                    android:button="@null"
+                    android:fontFamily="@font/robotomedium"
+                    android:gravity="center"
+                    android:text="Playlists"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp" />
+
+                <RadioButton
+                    android:id="@+id/btnchannel"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginStart="@dimen/_10ssp"
+                    android:layout_toEndOf="@id/btnall"
+                    android:background="@drawable/tab_selector"
+                    android:button="@null"
+                    android:fontFamily="@font/robotomedium"
+                    android:gravity="center"
+                    android:text="Channels"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp" />
+
+                <RadioButton
+                    android:id="@+id/btngoogle"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginStart="@dimen/_10ssp"
+                    android:layout_toEndOf="@id/btnall"
+                    android:background="@drawable/tab_selector"
+                    android:button="@null"
+                    android:fontFamily="@font/robotomedium"
+                    android:gravity="center"
+                    android:text="Google"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp" />
+            </RadioGroup>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"/>
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="#EA4335"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="@dimen/_5sdp">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imgback"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_35sdp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/back_browser"
+        app:layout_constraintEnd_toStartOf="@id/appname"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/appname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:paddingStart="@dimen/_10sdp"
+        android:text="Browser App"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="@id/imgback"
+        app:layout_constraintEnd_toStartOf="@id/imgClose"
+        app:layout_constraintStart_toEndOf="@id/imgback"
+        app:layout_constraintTop_toTopOf="@id/imgback" />
+
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imgClose"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_25sdp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/close"
+        app:layout_constraintBottom_toBottomOf="@id/imgback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/appname"
+        app:layout_constraintTop_toTopOf="@id/imgback" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

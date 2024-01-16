@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "377377551216",
+    "project_id": "tube-download-browser",
+    "storage_bucket": "tube-download-browser.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:377377551216:android:48939396646cba3c7995b5",
+        "android_client_info": {
+          "package_name": "com.vidbrowserdownloader.freebrowserdownload"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAetS_8c1DN59CqGA2RbWd_dErIrH-XPUE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

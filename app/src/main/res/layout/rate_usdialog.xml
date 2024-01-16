@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_dialog">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/imgclose"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/close" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/imgRating"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:src="@drawable/ratingimg" />
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgRating"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center"
+            android:text="Like Fast Video Downloader?\n Give 5 Stars!"
+            android:textColor="#363636"
+            android:textSize="@dimen/_12ssp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:theme="@style/RatingBar" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/btnrate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rate US"
+            android:gravity="center"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:textSize="@dimen/_14ssp"
+            android:layout_below="@id/ratingBar"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:background="@drawable/bg_ratbutton"/>
+
+
+    </RelativeLayout>
+</LinearLayout>

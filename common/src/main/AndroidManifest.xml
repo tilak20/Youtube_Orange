@@ -1,0 +1,11 @@
+<!--
+  ~ /**
+  ~  * Created by Syed Usama Ahmad on 3/4/23, 12:52 AM
+  ~  * Copyright (c) 2023 . All rights reserved.
+  ~  * Last modified 3/4/23, 12:48 AM
+  ~  */
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yausername.youtubedl_common">
+</manifest>
